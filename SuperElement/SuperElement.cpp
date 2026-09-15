@@ -45,7 +45,7 @@ std::vector<std::pair<int, double>> parse_data_line(const std::string& line) {
 		}
 		catch (...) { // Если формат числа нарушен, прекращаем чтение этой строки
 			break;
-		}
+		} 
 	} return result;
 }
 /**
