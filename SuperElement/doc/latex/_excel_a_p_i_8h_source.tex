@@ -1,0 +1,145 @@
+\doxysection{E:\+/\+job/\+vs/\+\+Super\+Element/\+\+Super\+Element/\+\+Excel\+API.h}
+\hypertarget{_excel_a_p_i_8h_source}{}\label{_excel_a_p_i_8h_source}\doxymbox{\hyperlink{_excel_a_p_i_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#import\ "{}MSO.DLL"{}}\ \(\backslash\)}
+\DoxyCodeLine{00003\ \ \ \ \ rename(\ \textcolor{stringliteral}{"{}RGB"{}},\ \textcolor{stringliteral}{"{}MSORGB"{}}\ )}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ using\ namespace\ Office;}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#import\ "{}VBE6EXT.OLB"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{using\ namespace\ }VBIDE;}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#import\ "{}C:\(\backslash\)\(\backslash\)Program\ Files\(\backslash\)\(\backslash\)Microsoft\ Office\(\backslash\)root\(\backslash\)\(\backslash\)Office16\(\backslash\)\(\backslash\)EXCEL.EXE"{}}\ \(\backslash\)}
+\DoxyCodeLine{00012\ \ \ \ \ rename(\ \textcolor{stringliteral}{"{}DialogBox"{}},\ \textcolor{stringliteral}{"{}ExcelDialogBox"{}}\ )\ \(\backslash\)}
+\DoxyCodeLine{00013\ \ \ \ \ rename(\ \textcolor{stringliteral}{"{}RGB"{}},\ \textcolor{stringliteral}{"{}ExcelRGB"{}}\ )\ \(\backslash\)}
+\DoxyCodeLine{00014\ \ \ \ \ rename(\ \textcolor{stringliteral}{"{}CopyFile"{}},\ \textcolor{stringliteral}{"{}ExcelCopyFile"{}}\ )\ \(\backslash\)}
+\DoxyCodeLine{00015\ \ \ \ \ rename(\ \textcolor{stringliteral}{"{}ReplaceText"{}},\ \textcolor{stringliteral}{"{}ExcelReplaceText"{}}\ )\ \(\backslash\)}
+\DoxyCodeLine{00016\ \ \ \ \ exclude(\ \textcolor{stringliteral}{"{}IFont"{}},\ \textcolor{stringliteral}{"{}IPicture"{}}\ )\ no\_dual\_interfaces}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include<Windows.h>}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\#include\ <atlbase.h>\ приводит\ к\ падению\ программы}}
+\DoxyCodeLine{00021\ \textcolor{comment}{//template\ <class\ Type>\ }}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_excel_a_p_i_a2df81ae239d6f2e074d6201e293adca9}{ExcelAPI}}\ \{}
+\DoxyCodeLine{00034\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00036\ \ \ \ \ \doxymbox{\hyperlink{class_excel_a_p_i_a2df81ae239d6f2e074d6201e293adca9}{ExcelAPI}}();}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_excel_a_p_i_ade6fdb0a13ed03fcc888852ddd81548a}{CreateExcel}}();}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{void}\ Visible(\textcolor{keywordtype}{bool});}
+\DoxyCodeLine{00040\ \ \ \ \textcolor{comment}{//\ template<typename\ T>}}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_excel_a_p_i_a2ece1e9f90f9d8ae8491cf9368e65e91}{Range}}(\textcolor{keywordtype}{double}\ d);}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_excel_a_p_i_a2ece1e9f90f9d8ae8491cf9368e65e91}{Range}}(\textcolor{keywordtype}{int}\ d);}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_excel_a_p_i_a2ece1e9f90f9d8ae8491cf9368e65e91}{Range}}(std::wstring\ d);}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_excel_a_p_i_aae05306041bee497c1cc81c95847483c}{SetRow}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ t)\ \{\ i\ =\ t;\ \}}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_excel_a_p_i_a5bbc0f22084a298a8a40d7f3675186f0}{SetColumn}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ t)\ \{\ k\ =\ t;\ \}}
+\DoxyCodeLine{00051\ \ \ \ \textcolor{comment}{//\ void\ NameSheetSet(std::string\ s);}}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_excel_a_p_i_aa11acd7d52ff1c7ee089f48129b267be}{NameSheetSet}}(std::wstring\ s);}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_excel_a_p_i_ab5b979a84dc962e6d26ed040fdd7e0a6}{AddSheet}}(std::wstring\ s);}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_excel_a_p_i_a15067c12de674afb6a7681357eb2d168}{QuitExcel}}();}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{void}\ SetString(\_bstr\_t\ test)\ \{\ str\ =\ test;\ \}}
+\DoxyCodeLine{00060\ \ \ \ \ \doxymbox{\hyperlink{class_excel_a_p_i_a981fa71376eff0c5b8f40fcc777d4596}{\string~ExcelAPI}}()\{}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \textcolor{comment}{//\ if\ (comInitialized)\ }}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ CoUninitialize();}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00065\ \ \ \ \ \}}
+\DoxyCodeLine{00066\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{int}\ countSheet;}
+\DoxyCodeLine{00068\ \ \ \ \ Excel::\_ApplicationPtr\ pXL;}
+\DoxyCodeLine{00069\ \ \ \ \ Excel::\_WorkbookPtr\ WorkBook;}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ i;}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ k;}
+\DoxyCodeLine{00072\ \ \ \ \ \_bstr\_t\ str;}
+\DoxyCodeLine{00073\ \ \textcolor{comment}{//\ \ \ Excel::\_WorksheetPtr\ pWksheet;}}
+\DoxyCodeLine{00074\ \};}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \doxymbox{\hyperlink{class_excel_a_p_i_a2df81ae239d6f2e074d6201e293adca9}{ExcelAPI::ExcelAPI}}()}
+\DoxyCodeLine{00078\ \{}
+\DoxyCodeLine{00079\ \ \ \ \ countSheet\ =\ 1;}
+\DoxyCodeLine{00080\ \ \ \ \ i\ =\ 1;}
+\DoxyCodeLine{00081\ \ \ \ \ k\ =\ 1;}
+\DoxyCodeLine{00082\ \ \ \ \ str\ =\ \textcolor{stringliteral}{"{}e:\(\backslash\)\(\backslash\)job\(\backslash\)\(\backslash\)book.xlsx"{}};}
+\DoxyCodeLine{00083\ \ \ \ \ HRESULT\ hr=\ CoInitializeEx(0,\ COINIT\_MULTITHREADED);}
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordflow}{if}\ (FAILED(hr))}
+\DoxyCodeLine{00085\ \ \ \ \ \{}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Failed\ to\ initialize\ COM\ library.\ Error\ code\ =\ 0x"{}}}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ <<\ std::hex\ <<\ hr\ <<\ std::endl;}
+\DoxyCodeLine{00088\ \ \ \ \ \ \textcolor{comment}{//\ \ \ return;}}
+\DoxyCodeLine{00089\ \ \ \ \ \ \}}
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordflow}{if}\ (FAILED(pXL.CreateInstance(\textcolor{stringliteral}{"{}Excel.Application"{}})))}
+\DoxyCodeLine{00091\ \ \ \ \ \{}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Failed\ to\ initialize\ Excel::\_Application!"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00093\ \ \ \ \ }
+\DoxyCodeLine{00094\ \ \ \ \ \}}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ \}}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00098\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_excel_a_p_i_ade6fdb0a13ed03fcc888852ddd81548a}{ExcelAPI::CreateExcel}}()\ \{}
+\DoxyCodeLine{00099\ \ \ \ \ WorkBook\ =\ pXL-\/>Workbooks-\/>Add(Excel::xlWorksheet);}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00102\ \}}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00104\ \textcolor{keywordtype}{void}\ ExcelAPI::Visible(\textcolor{keywordtype}{bool}\ temp)}
+\DoxyCodeLine{00105\ \{}
+\DoxyCodeLine{00106\ \ \ \ \ pXL-\/>Visible\ =\ temp;}
+\DoxyCodeLine{00107\ \}}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00110\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_excel_a_p_i_aa11acd7d52ff1c7ee089f48129b267be}{ExcelAPI::NameSheetSet}}(std::wstring\ s)\ \{}
+\DoxyCodeLine{00111\ \ \ \ \ \_bstr\_t\ t(s.c\_str());}
+\DoxyCodeLine{00112\ \ \ \ \ Excel::\_WorksheetPtr\ pWksheet\ =\ pXL-\/>ActiveSheet;}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00114\ \ \ \ \ pWksheet-\/>Name\ =\ t;}
+\DoxyCodeLine{00115\ \ \ \ \ }
+\DoxyCodeLine{00116\ \}}
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00118\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_excel_a_p_i_a2ece1e9f90f9d8ae8491cf9368e65e91}{ExcelAPI::Range}}(\textcolor{keywordtype}{double}\ d)}
+\DoxyCodeLine{00119\ \{}
+\DoxyCodeLine{00120\ \ \ \ \ Excel::\_WorksheetPtr\ pWksheet\ =\ pXL-\/>ActiveSheet;}
+\DoxyCodeLine{00121\ \ \ \ \ Excel::RangePtr\ pRange\ =\ pWksheet-\/>Cells;}
+\DoxyCodeLine{00122\ \ \ \ \ pRange-\/>Item[i][k]\ =\ d;}
+\DoxyCodeLine{00123\ \}}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00125\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_excel_a_p_i_a2ece1e9f90f9d8ae8491cf9368e65e91}{ExcelAPI::Range}}(std::wstring\ d)}
+\DoxyCodeLine{00126\ \{}
+\DoxyCodeLine{00127\ \ \ \ \ \_bstr\_t\ t(d.c\_str());}
+\DoxyCodeLine{00128\ \ \ \ \ Excel::\_WorksheetPtr\ pWksheet\ =\ pXL-\/>ActiveSheet;}
+\DoxyCodeLine{00129\ \ \ \ \ Excel::RangePtr\ pRange\ =\ pWksheet-\/>Cells;}
+\DoxyCodeLine{00130\ \ \ \ \ pRange-\/>Item[i][k]\ =\ t;}
+\DoxyCodeLine{00131\ \}}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00133\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_excel_a_p_i_a2ece1e9f90f9d8ae8491cf9368e65e91}{ExcelAPI::Range}}(\textcolor{keywordtype}{int}\ d)}
+\DoxyCodeLine{00134\ \{}
+\DoxyCodeLine{00135\ \ \ \ \ Excel::\_WorksheetPtr\ pWksheet\ =\ pXL-\/>ActiveSheet;}
+\DoxyCodeLine{00136\ \ \ \ \ Excel::RangePtr\ pRange\ =\ pWksheet-\/>Cells;}
+\DoxyCodeLine{00137\ \ \ \ \ pRange-\/>Item[i][k]\ =\ d;}
+\DoxyCodeLine{00138\ \}}
+\DoxyCodeLine{00139\ }
+\DoxyCodeLine{00140\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_excel_a_p_i_ab5b979a84dc962e6d26ed040fdd7e0a6}{ExcelAPI::AddSheet}}(std::wstring\ s)}
+\DoxyCodeLine{00141\ \{}
+\DoxyCodeLine{00142\ \ \ \ \ \_bstr\_t\ t(s.c\_str());}
+\DoxyCodeLine{00143\ \ \ \ \ Excel::\_WorksheetPtr\ pWksheet\ =\ \textcolor{comment}{//pXL-\/>Sheets-\/>Add();}}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ pXL-\/>GetWorksheets()-\/>Add();}
+\DoxyCodeLine{00145\ \ \ \ \ Excel::SheetsPtr\ pSheets\ =\ pXL-\/>Worksheets;}
+\DoxyCodeLine{00146\ \ \ \ \ pWksheet-\/>Name\ =\ t;}
+\DoxyCodeLine{00147\ \ \ \ \ pWksheet\ =\ pSheets-\/>Item[1];}
+\DoxyCodeLine{00148\ \ \ \ \ pWksheet-\/>Activate();}
+\DoxyCodeLine{00149\ \ \ \ \ countSheet++;}
+\DoxyCodeLine{00150\ }
+\DoxyCodeLine{00151\ }
+\DoxyCodeLine{00152\ \}}
+\DoxyCodeLine{00153\ }
+\DoxyCodeLine{00154\ }
+\DoxyCodeLine{00155\ }
+\DoxyCodeLine{00156\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_excel_a_p_i_a15067c12de674afb6a7681357eb2d168}{ExcelAPI::QuitExcel}}()}
+\DoxyCodeLine{00157\ \{\ \ \ }
+\DoxyCodeLine{00158\ \ \ \ \ Excel::\_WorksheetPtr\ pWksheet\ =\ pXL-\/>ActiveSheet;\ \ \ }
+\DoxyCodeLine{00159\ \ \ \ \ pWksheet-\/>SaveAs(str);}
+\DoxyCodeLine{00160\ \ \ \ pXL-\/>Quit();}
+\DoxyCodeLine{00161\ \}}
+
+\end{DoxyCode}

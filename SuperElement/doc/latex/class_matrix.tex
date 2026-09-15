@@ -1,0 +1,42 @@
+\doxysection{Matrix\texorpdfstring{$<$}{<} T, N \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{class_matrix}{}\label{class_matrix}\index{Matrix$<$ T, N $>$@{Matrix$<$ T, N $>$}}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \doxymbox{\hyperlink{class_matrix_1_1_iterator}{Iterator}}
+\begin{DoxyCompactList}\small\item\em пользовательский итератор для обхода контейнера \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_matrix_a754696da98ec9a741fe35e96df743fb1}\label{class_matrix_a754696da98ec9a741fe35e96df743fb1} 
+{\bfseries Matrix} ()
+\begin{DoxyCompactList}\small\item\em Конструктор устанавливает значение элемента по умолчанию \end{DoxyCompactList}\item 
+\Hypertarget{class_matrix_a2943defe76f3fbbf18a58ed3ca9d0b9a}\label{class_matrix_a2943defe76f3fbbf18a58ed3ca9d0b9a} 
+\doxymbox{\hyperlink{class_proxy}{Proxy}}$<$ T, N $>$ {\bfseries operator\+[$\,$]\+} (long x)
+\begin{DoxyCompactList}\small\item\em Перегрузка оператора \+[]\+ позволяет обращаться к элементам матрицы по индексу x. \end{DoxyCompactList}\item 
+\Hypertarget{class_matrix_a86bc32fc878cdbc0ed26b08bbcc17b5c}\label{class_matrix_a86bc32fc878cdbc0ed26b08bbcc17b5c} 
+size\+\_\+t {\bfseries size} ()
+\begin{DoxyCompactList}\small\item\em Выводит размет матрицы \end{DoxyCompactList}\item 
+\Hypertarget{class_matrix_a98497b47ec41c395cbc5b30627dcc059}\label{class_matrix_a98497b47ec41c395cbc5b30627dcc059} 
+T {\bfseries get\+Default\+Element} ()
+\begin{DoxyCompactList}\small\item\em Выводит элемент по умолчанию \end{DoxyCompactList}\item 
+\Hypertarget{class_matrix_ac9c0bbba09324be3a14bb62b4b148081}\label{class_matrix_ac9c0bbba09324be3a14bb62b4b148081} 
+const T \& {\bfseries find\+By\+Coord} (std::\+pair$<$ long, long $>$ coordinates) const
+\begin{DoxyCompactList}\small\item\em поиск элемента по координатам:\+ строки, столбец \end{DoxyCompactList}\item 
+\Hypertarget{class_matrix_a5191101b9dae45bb57e9afa7566b8443}\label{class_matrix_a5191101b9dae45bb57e9afa7566b8443} 
+void {\bfseries remove\+Element} (std::\+pair$<$ long, long $>$ coordinates)
+\begin{DoxyCompactList}\small\item\em удаление элемента \end{DoxyCompactList}\item 
+\Hypertarget{class_matrix_a95bb9454e59f07b092aeb931a398c036}\label{class_matrix_a95bb9454e59f07b092aeb931a398c036} 
+void {\bfseries insert\+Element} (std::\+pair$<$ long, long $>$ coordinates, T value)
+\begin{DoxyCompactList}\small\item\em вставка элемента \end{DoxyCompactList}\item 
+\Hypertarget{class_matrix_a99308d878d5fbbf62b032556e0a2b5ed}\label{class_matrix_a99308d878d5fbbf62b032556e0a2b5ed} 
+\doxymbox{\hyperlink{class_matrix_1_1_iterator}{Iterator}} {\bfseries begin} ()
+\begin{DoxyCompactList}\small\item\em Возвращает итератор для начала контейнера. \end{DoxyCompactList}\item 
+\Hypertarget{class_matrix_a4d45d9fb5338af52f81cae4ba9f9dae1}\label{class_matrix_a4d45d9fb5338af52f81cae4ba9f9dae1} 
+\doxymbox{\hyperlink{class_matrix_1_1_iterator}{Iterator}} {\bfseries end} ()
+\begin{DoxyCompactList}\small\item\em Возвращает итератор для конца контейнера. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+E:\+/\+job/\+vs/\+\+Super\+Element/\+\+Super\+Element/\+\doxymbox{\hyperlink{_matrix_8h}{Matrix.\+h}}\end{DoxyCompactItemize}

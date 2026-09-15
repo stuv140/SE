@@ -1,0 +1,61 @@
+\doxysection{Proxy Class Reference}
+\hypertarget{class_proxy}{}\label{class_proxy}\index{Proxy@{Proxy}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_proxy_a333bc83cddd2b6f5c7829651e8c55da0}{Proxy}} (\doxymbox{\hyperlink{class_matrix}{Matrix}}$<$ T, N $>$ \texorpdfstring{$\ast$}{*}matrix\+Ptr\+\_\+, long x\+\_\+)
+\begin{DoxyCompactList}\small\item\em коструктор класса обертки \doxylink{class_proxy}{Proxy} \end{DoxyCompactList}\item 
+\Hypertarget{class_proxy_a2f9c8445a2a1db22422185ffd92a795e}\label{class_proxy_a2f9c8445a2a1db22422185ffd92a795e} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Proxy} ()
+\begin{DoxyCompactList}\small\item\em Деструктор \end{DoxyCompactList}\item 
+\Hypertarget{class_proxy_a512f10b047d64840fa714814edbff805}\label{class_proxy_a512f10b047d64840fa714814edbff805} 
+\doxymbox{\hyperlink{class_proxy}{Proxy}} \& {\bfseries operator\+[$\,$]\+} (int y)
+\begin{DoxyCompactList}\small\item\em перегрузка оператора\+[]\+ и обращение к элементам массива вида matrix\+[x]\+\+[y]\+ \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_proxy_a59bc06b64725f55b91f4fae4354d809f}{operator=}} (T new\+Value)
+\begin{DoxyCompactList}\small\item\em operator= обеспечивает "{}ленивое"{} управление памятью или содержимым матрицы:\+ элементы хранятся только, если они отличаются от дефолтного значения, а при присваивании к дефолтному элементу он удаляется \end{DoxyCompactList}\item 
+\Hypertarget{class_proxy_afea82deba124c791803206311f35ae83}\label{class_proxy_afea82deba124c791803206311f35ae83} 
+{\bfseries operator T} ()
+\begin{DoxyCompactList}\small\item\em Оператор позволяет объекту вести себя как значение типа T. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{doc-constructors}
+\Hypertarget{class_proxy_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_proxy_a333bc83cddd2b6f5c7829651e8c55da0}\index{Proxy@{Proxy}!Proxy@{Proxy}}
+\index{Proxy@{Proxy}!Proxy@{Proxy}}
+\doxysubsubsection{\texorpdfstring{Proxy()}{Proxy()}}
+{\footnotesize\ttfamily \label{class_proxy_a333bc83cddd2b6f5c7829651e8c55da0} 
+Proxy::\+\+Proxy (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_matrix}{Matrix}}$<$ T, N $>$ \texorpdfstring{$\ast$}{*}}]{matrix\+Ptr\+\_\+}{, }\item[{long}]{x\+\_\+}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+коструктор класса обертки \doxylink{class_proxy}{Proxy} 
+
+\doxylink{class_matrix}{Matrix$<$\+T, N$>$} — матрица
+
+T — тип элементов
+
+long — размерность (например, N×N). 
+
+\label{doc-func-members}
+\Hypertarget{class_proxy_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_proxy_a59bc06b64725f55b91f4fae4354d809f}\index{Proxy@{Proxy}!operator=@{operator=}}
+\index{operator=@{operator=}!Proxy@{Proxy}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \label{class_proxy_a59bc06b64725f55b91f4fae4354d809f} 
+void Proxy::\+operator= (\begin{DoxyParamCaption}\item[{T}]{new\+Value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+operator= обеспечивает "{}ленивое"{} управление памятью или содержимым матрицы:\+ элементы хранятся только, если они отличаются от дефолтного значения, а при присваивании к дефолтному элементу он удаляется 
+
+проверка на равенство со стандартным элементом
+
+если новый элемент не дефолтный, то устанавливаем значение элемента.
+
+если новый элемент дефолтный, то удаляем старый элемент или ничего не делаем. 
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+E:\+/\+job/\+vs/\+\+Super\+Element/\+\+Super\+Element/\+\doxymbox{\hyperlink{_proxy_8h}{Proxy.\+h}}\end{DoxyCompactItemize}

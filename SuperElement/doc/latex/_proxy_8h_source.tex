@@ -1,0 +1,55 @@
+\doxysection{E:\+/\+job/\+vs/\+\+Super\+Element/\+\+Super\+Element/\+\+Proxy.h}
+\hypertarget{_proxy_8h_source}{}\label{_proxy_8h_source}\doxymbox{\hyperlink{_proxy_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_matrix_8h}{matrix.h}}"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ T,\ T\ N>}
+\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_matrix}{Matrix}};}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ T,\ T\ N>}
+\DoxyCodeLine{00024\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_proxy_a333bc83cddd2b6f5c7829651e8c55da0}{Proxy}}\ \{}
+\DoxyCodeLine{00025\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00030\ \ \ \ \ \doxymbox{\hyperlink{class_proxy_a333bc83cddd2b6f5c7829651e8c55da0}{Proxy}}(\doxymbox{\hyperlink{class_matrix}{Matrix<T,\ N>}}*\ matrixPtr\_,\ \textcolor{keywordtype}{long}\ x\_)\ :}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ matrixPtr(matrixPtr\_),\ element(0),\ x(x\_)}
+\DoxyCodeLine{00032\ \ \ \ \ \{}
+\DoxyCodeLine{00033\ \ \ \ \ \};}
+\DoxyCodeLine{00035\ \ \ \ \ \doxymbox{\hyperlink{class_proxy_a2f9c8445a2a1db22422185ffd92a795e}{\string~Proxy}}()\ \{}
+\DoxyCodeLine{00036\ \ \ \ \ \};}
+\DoxyCodeLine{00038\ \ \ \ \ \doxymbox{\hyperlink{class_proxy_a333bc83cddd2b6f5c7829651e8c55da0}{Proxy}}\&\ \doxymbox{\hyperlink{class_proxy_a512f10b047d64840fa714814edbff805}{operator[]}}(\textcolor{keywordtype}{int}\ y)\ \{}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ coord\ =\ std::make\_pair(x,\ y);}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ element\ =\ matrixPtr-\/>findByCoord(coord);}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
+\DoxyCodeLine{00042\ \ \ \ \ \};}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_proxy_a59bc06b64725f55b91f4fae4354d809f}{operator=}}(T\ newValue)\ \{}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (newValue\ !=\ matrixPtr-\/>getDefaultElement())\ \{}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (element\ !=\ matrixPtr-\/>getDefaultElement())\ \{}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ element\ =\ newValue;}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ matrixPtr-\/>insertElement(coord,\ newValue);}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (element\ !=\ matrixPtr-\/>getDefaultElement())\ \{}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ matrixPtr-\/>removeElement(coord);}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00063\ \ \ \ \ \};}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keyword}{operator}\ T()\ \{\ \textcolor{comment}{//\ для\ assert(a\ ==\ -\/1);}}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ element;}
+\DoxyCodeLine{00067\ \ \ \ \ \}}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{long}\ x;}
+\DoxyCodeLine{00072\ \ \ \ \ std::pair<long,\ long>\ coord;}
+\DoxyCodeLine{00074\ \ \ \ \ T\ element;}
+\DoxyCodeLine{00076\ \ \ \ \ \doxymbox{\hyperlink{class_matrix}{Matrix<T,\ N>}}*\ matrixPtr;}
+\DoxyCodeLine{00077\ \};}
+
+\end{DoxyCode}

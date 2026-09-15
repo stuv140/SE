@@ -1,0 +1,45 @@
+\doxysection{Matrix\texorpdfstring{$<$}{<} T, N \texorpdfstring{$>$}{>}::\+Iterator Class Reference}
+\hypertarget{class_matrix_1_1_iterator}{}\label{class_matrix_1_1_iterator}\index{Matrix$<$ T, N $>$::Iterator@{Matrix$<$ T, N $>$::Iterator}}
+
+
+пользовательский итератор для обхода контейнера  
+
+
+
+
+{\ttfamily \+\#include $<$Matrix.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_matrix_1_1_iterator_a7ca4c8b50e357ce7ebd040a629a52341}\label{class_matrix_1_1_iterator_a7ca4c8b50e357ce7ebd040a629a52341} 
+{\bfseries Iterator} (Iterator\+Type matrix\+It\+\_\+)
+\begin{DoxyCompactList}\small\item\em Конструктор инициализирует итератор \end{DoxyCompactList}\item 
+\Hypertarget{class_matrix_1_1_iterator_a3aa8b5a060b3d0b473892322c2e1da8f}\label{class_matrix_1_1_iterator_a3aa8b5a060b3d0b473892322c2e1da8f} 
+Iterator\+Type {\bfseries get\+Inside\+Iterator} ()
+\item 
+\Hypertarget{class_matrix_1_1_iterator_a76be1d7401283367347b441bd8ceab07}\label{class_matrix_1_1_iterator_a76be1d7401283367347b441bd8ceab07} 
+void {\bfseries operator++} ()
+\begin{DoxyCompactList}\small\item\em Продвижение итератора вперед \end{DoxyCompactList}\item 
+\Hypertarget{class_matrix_1_1_iterator_a1fc64c19a7f8ca219ed109abf545a179}\label{class_matrix_1_1_iterator_a1fc64c19a7f8ca219ed109abf545a179} 
+std::\+tuple$<$ long, long, T $>$ {\bfseries operator\texorpdfstring{$\ast$}{*}} ()
+\begin{DoxyCompactList}\small\item\em Возвращает кортеж(long, long, T) — координаты и значение элемента \end{DoxyCompactList}\item 
+\Hypertarget{class_matrix_1_1_iterator_a8b1af60dfa6fd2f8c5915f3e51ea76eb}\label{class_matrix_1_1_iterator_a8b1af60dfa6fd2f8c5915f3e51ea76eb} 
+void {\bfseries operator-\/-\/} ()
+\begin{DoxyCompactList}\small\item\em продвижение итератора назад \end{DoxyCompactList}\item 
+\Hypertarget{class_matrix_1_1_iterator_a726d050c59241a6969c7f02ad7a471db}\label{class_matrix_1_1_iterator_a726d050c59241a6969c7f02ad7a471db} 
+bool {\bfseries operator!=} (\doxymbox{\hyperlink{class_matrix_1_1_iterator_a7ca4c8b50e357ce7ebd040a629a52341}{Iterator}} \&other)
+\begin{DoxyCompactList}\small\item\em Сравнение итераторов по внутренним итераторам. \end{DoxyCompactList}\item 
+\Hypertarget{class_matrix_1_1_iterator_a88dd6b2144f2911d77f5da2c9dcf053f}\label{class_matrix_1_1_iterator_a88dd6b2144f2911d77f5da2c9dcf053f} 
+bool {\bfseries operator==} (\doxymbox{\hyperlink{class_matrix_1_1_iterator_a7ca4c8b50e357ce7ebd040a629a52341}{Iterator}} \&other)
+\begin{DoxyCompactList}\small\item\em Сравнение итераторов по внутренним итераторам. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$class T, T N$>$\newline
+class Matrix$<$ T, N $>$::\+\+Iterator}
+пользовательский итератор для обхода контейнера 
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+E:\+/\+job/\+vs/\+\+Super\+Element/\+\+Super\+Element/\+\doxymbox{\hyperlink{_matrix_8h}{Matrix.\+h}}\end{DoxyCompactItemize}
